@@ -1,1 +1,49 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="device_forever" id="+;q!AoUBOmD,($$H-.Mc" x="283" y="-31"/><block type="pxt-on-start" id="u-vzFC(KV+3d*}7AZB;e" x="0" y="0"><statement name="HANDLER"><block type="basic_show_icon" id="Xu0I5,tR=Gs5B6RJ=4zi"><field name="i">IconNames.Heart</field><next><block type="bluetooth_start_temperature_service" id=":*o|/sc1xX9$E^5+xH?}"><next><block type="bluetooth_start_io_pin_service" id="1u$?ZR_:abA[*vQr1|P1"/></next></block></next></block></statement></block><block type="bluetooth_on_connected" id="YXsDj7{GA`BkNU[,03OF" x="18" y="370"><statement name="HANDLER"><block type="basic_show_icon" id="g{Aw*y1wxPmFzX^$tZyC"><field name="i">IconNames.Yes</field></block></statement></block><block type="bluetooth_on_disconnected" id="2wJ_zTZd+j}4dKRK0y(_" x="294" y="373"><statement name="HANDLER"><block type="basic_show_icon" id="2u9OXw-g/m0p5qiS@(Sq"><field name="i">IconNames.No</field></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="V9.g.Zn^.q1D7mbtWhrq">Humedad</variable><variable id="n3AHU/;jDBAqIwg[Uj@`">Temperatura</variable><variable id="Y)c9MC)1I90-,Fg2Mitt">Luminosidad</variable></variables><block type="bluetooth_on_connected" id="YXsDj7{GA`BkNU[,03OF" x="-794" y="-1048"><statement name="HANDLER"><block type="controls_if" id="EBIn[S?C/s[gl7ju]j@h"><mutation elseif="2" else="1"></mutation><value name="IF0"><shadow type="logic_boolean" id="gS9z!/EMc:0Lg7{_Fj^;"><field name="BOOL">TRUE</field></shadow><block type="logic_operation" id=",2k$C^7A/_a8-GHjBUqW"><field name="OP">OR</field><value name="A"><block type="logic_compare" id="k2kLf:,AXs^{~?:*rd5M"><field name="OP">LT</field><value name="A"><shadow type="math_number" id="a[~Lro-Te}EdJEVD$:+h"><field name="NUM">0</field></shadow><block type="variables_get" id="U/A9[~SJ)iCb$aSR!+L2"><field name="VAR" id="n3AHU/;jDBAqIwg[Uj@`">Temperatura</field></block></value><value name="B"><shadow type="math_number" id="-*cA*viU8!Q:/J?O,q#%"><field name="NUM">9</field></shadow></value></block></value><value name="B"><block type="logic_compare" id="pGBqIiMIz+RI=bSH`mLZ"><field name="OP">GT</field><value name="A"><shadow type="math_number" id="?e*b[%Ao|KOvu5.[[6Pi"><field name="NUM">0</field></shadow><block type="variables_get" id="G6;B]Y,8:[$tn:0uB-bN"><field name="VAR" id="n3AHU/;jDBAqIwg[Uj@`">Temperatura</field></block></value><value name="B"><shadow type="math_number" id="Kgx6SV47IL,[vtNuKp1)"><field name="NUM">30</field></shadow></value></block></value></block></value><statement name="DO0"><block type="device_show_leds" id="T`Enx4{pt21/!xck`es@"><field name="LEDS">`
+        . # . # . 
+        . . . . . 
+        . # # # . 
+        # . . . # 
+        . . . . #
+        `</field></block></statement><value name="IF1"><block type="logic_compare" id="3qSnEW*q5=,Sd..x$Bp8"><field name="OP">LT</field><value name="A"><shadow type="math_number" id="?NZ:(j|d=b9XksWX73oB"><field name="NUM">0</field></shadow><block type="variables_get" id="OSM8V2oREnY]NrPs/KpF"><field name="VAR" id="V9.g.Zn^.q1D7mbtWhrq">Humedad</field></block></value><value name="B"><shadow type="math_number" id=".xP[~T#F:if(Is)p{;|4"><field name="NUM">80</field></shadow></value></block></value><statement name="DO1"><block type="device_show_leds" id="gN!0]Mx(P)4Sz-od8$O2"><field name="LEDS">`
+        # # . # . 
+        # . . . . 
+        . # # # . 
+        # . . . # 
+        . . . . #
+        `</field></block></statement><value name="IF2"><block type="logic_compare" id="sVW]8Dr#9BX=[f-$A;^@"><field name="OP">LT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="Ekyu-1GN!C}[8I_/*D;}"><field name="VAR" id="Y)c9MC)1I90-,Fg2Mitt">Luminosidad</field></block></value><value name="B"><shadow type="math_number" id="6I!*.L+pM3!mz;$%m1xM"><field name="NUM">20</field></shadow></value></block></value><statement name="DO2"><block type="device_show_leds" id="@@cP*!%^9{Bg-w9^v-mC"><field name="LEDS">`
+        # # . # # 
+        . . . . . 
+        # # # # # 
+        . . . . . 
+        . . . . #
+        `</field></block></statement><statement name="ELSE"><block type="device_show_leds" id="rmh.eR|JNM5^-hB+ZZ;O"><field name="LEDS">`
+        . # . # . 
+        . . . . . 
+        # . . . # 
+        . # # # . 
+        . . . . #
+        `</field></block></statement></block></statement></block><block type="bluetooth_on_disconnected" id="2wJ_zTZd+j}4dKRK0y(_" x="96" y="-1040"><statement name="HANDLER"><block type="controls_if" id="_hgCBp9m-ENfd92veT!4"><mutation elseif="2" else="1"></mutation><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_operation" id="d1,8_|I/g94(sjLhZRT="><field name="OP">OR</field><value name="A"><block type="logic_compare" id="xnfD?E1]sJzHpFU[0uxS"><field name="OP">LT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_temperature" id="Z*0r8N)u5x^B(AFxMh=g"></block></value><value name="B"><shadow type="math_number" id="PWun2E?)fS!ftSOEL?mD"><field name="NUM">9</field></shadow></value></block></value><value name="B"><block type="logic_compare" id="ll#[p1et+(HI2_Q(O/bq"><field name="OP">GT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_temperature" id=";u}%m.b[v96EFU~o4Lua"></block></value><value name="B"><shadow type="math_number" id="BImDr[ljc8:`Y=@670RM"><field name="NUM">30</field></shadow></value></block></value></block></value><statement name="DO0"><block type="device_show_leds" id="={p(]hN~l0rw_e}EKhE{"><field name="LEDS">`
+        . # . # . 
+        . . . . . 
+        . # # # . 
+        # . . . # 
+        . . . . #
+        `</field></block></statement><value name="IF1"><block type="logic_compare" id="=YK@lB:!Hm)SSKp4QcS7"><field name="OP">LT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="kToxQTqVJ7VLbov^W4^K"><field name="VAR" id="V9.g.Zn^.q1D7mbtWhrq">Humedad</field></block></value><value name="B"><shadow type="math_number" id="XBc#Ye?UqH,}CVcn-|M~"><field name="NUM">80</field></shadow></value></block></value><statement name="DO1"><block type="device_show_leds" id="zVF2#Ac]pnDFcu|n;w%9"><field name="LEDS">`
+        # # . # . 
+        # . . . . 
+        . # # # . 
+        # . . . # 
+        . . . . #
+        `</field></block></statement><value name="IF2"><block type="logic_compare" id="g)af8_ma;4}R4{6VuFt^"><field name="OP">LT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="X-53G0L{UG.O{!1R.3y)"><field name="VAR" id="Y)c9MC)1I90-,Fg2Mitt">Luminosidad</field></block></value><value name="B"><shadow type="math_number" id="coKbxj}=fh6R*C`eTwO/"><field name="NUM">20</field></shadow></value></block></value><statement name="DO2"><block type="device_show_leds" id="Kl)kJqOYde#M/!{?7d@x"><field name="LEDS">`
+        # # . # # 
+        . . . . . 
+        # # # # # 
+        . . . . . 
+        . . . . #
+        `</field></block></statement><statement name="ELSE"><block type="device_show_leds" id="mp)jX@~Iqd7qJU]s}To*"><field name="LEDS">`
+        . # . # . 
+        . . . . . 
+        # . . . # 
+        . # # # . 
+        . . . . #
+        `</field></block></statement></block></statement></block><block type="device_forever" id="*.i`Kp~3@*{@Y@acjujy" x="1073" y="-802"><statement name="HANDLER"><block type="variables_set" id="Ef`D13#y#_{+fJ7Ky_Ak"><field name="VAR" id="n3AHU/;jDBAqIwg[Uj@`">Temperatura</field><value name="VALUE"><shadow type="math_number" id="N+94}Ux|{bIU*.AHL]1%"><field name="NUM">0</field></shadow><block type="device_temperature" id=".D(sHcZ3#z$nCv^woZux"></block></value><next><block type="variables_set" id="0`1KQ.ecNX=7lBrl1s_2"><field name="VAR" id="V9.g.Zn^.q1D7mbtWhrq">Humedad</field><value name="VALUE"><shadow type="math_number" id="3/+4%xS=QgbWKcr|hY{a"><field name="NUM">0</field></shadow><block type="device_get_analog_pin" id="}BQjGS0|:B}f:)mZ#5WH"><field name="name">AnalogPin.P0</field></block></value><next><block type="variables_set" id="B/XIB+0s1Y}S!ck9~9Z}"><field name="VAR" id="Y)c9MC)1I90-,Fg2Mitt">Luminosidad</field><value name="VALUE"><shadow type="math_number" id="I:Vo{:zURO~3+G%(*dn,"><field name="NUM">0</field></shadow><block type="device_get_light_level" id="vHxOf=vzayA9dt+7`FY/"></block></value><next><block type="device_pause" id="ZUX*3o,c~o9KCi`D7-s*"><value name="pause"><shadow type="timePicker" id="37M^eH:Vnyl(GRc5zs.#"><field name="ms">5000</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="pxt-on-start" id="u-vzFC(KV+3d*}7AZB;e" x="1069" y="-461"><statement name="HANDLER"><block type="basic_show_icon" id="Xu0I5,tR=Gs5B6RJ=4zi"><field name="i">IconNames.Heart</field><next><block type="bluetooth_start_temperature_service" id=":*o|/sc1xX9$E^5+xH?}"><next><block type="bluetooth_start_io_pin_service" id="1u$?ZR_:abA[*vQr1|P1"></block></next></block></next></block></statement></block></xml>
